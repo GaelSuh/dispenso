@@ -56,7 +56,7 @@ export function Downloads() {
                 {build.ready ? (
                   <Button
                     href={'url' in build ? build.url! : downloads.releasesUrl}
-                    external={'url' in build ? false : true}
+                    external
                     size="md"
                     variant="primary"
                     iconLeft={<Download className="h-4 w-4" />}

@@ -338,19 +338,19 @@ export const faq = [
    ────────────────────────────────────────────────────────────────── */
 
 export const downloads = {
-  version: '1.1.0',
+  version: '1.4.12',
   releasedAt: '2026-05-28',
-  releasesUrl: 'https://github.com/AtirhGael/dispenso/releases/latest',
+  releasesUrl: 'https://github.com/GaelSuh/dispenso/releases/tag/1.4.12',
   notes:
     'Configurable pharmacy header on receipts, polished receipt layout, smoother sidebar scrolling, new near-expiry KPI, drug name now visible on every refund and printed receipt.',
   builds: [
     {
       os: 'Windows',
       arch: '64-bit · Windows 10 / 11',
-      file: 'Dispenso-Setup-1.1.0.exe',
+      file: 'Dispenso-Setup-1.4.12.exe',
       size: '~101 MB',
       ready: true,
-      url: '/downloads/Dispenso-Setup-1.1.0.exe',
+      url: 'https://github.com/GaelSuh/dispenso/releases/tag/1.4.12',
     },
     {
       os: 'macOS',

@@ -5,6 +5,8 @@ out/
 .env*.local
 *.tsbuildinfo
 next-env.d.ts
+*.exe
 
 # Large installer binaries — uploaded manually on deploy
 public/downloads/
+release/
