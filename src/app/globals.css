@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ──────────────────────────────────────────────────────────────────
+   Dispenso — marketing site
+   Design system base layer.
+
+   Rules followed throughout this file:
+     - 8px base spacing grid (no 5/7/11/13px values)
+     - Single brand hue + warm-amber accent. No purples, no pinks.
+     - Inter Variable served via next/font in layout.tsx
+     - Focus rings are visible and brand-colored, not the browser default
+     - Selection color matches the brand
+   ────────────────────────────────────────────────────────────────── */
+
+@layer base {
+  :root {
+    --background: 60 26% 98%;   /* paper warm */
+    --foreground: 226 35% 10%;  /* ink-900 */
+    --muted: 226 18% 96%;
+    --muted-foreground: 226 12% 38%;
+    --border: 226 14% 90%;
+    --ring: 88 56% 41%;
+    --radius: 0.75rem;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Avoid the bouncy iOS feel on a marketing page */
+    overscroll-behavior-y: none;
+  }
+
+  body {
+    @apply bg-paper text-ink-900 font-sans antialiased;
+    font-feature-settings: 'ss01', 'cv11', 'ss03';   /* Inter alt forms — 1/I distinction, single-storey g */
+  }
+
+  ::selection {
+    background-color: rgba(113, 162, 47, 0.22);
+    color: #131e07;
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Reset heading defaults — we set explicit sizes per usage site */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    letter-spacing: -0.015em;
+  }
+
+  /* Better paragraph rhythm */
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Headings get balanced wrap so they look hand-set on one or two lines */
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  /* Section spacing scale — keeps every page on the same rhythm */
+  .section {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+  .section-tight {
+    @apply py-14 md:py-20;
+  }
+
+  /* Eyebrow label — used above section headings */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-eyebrow uppercase
+           text-brand-700;
+  }
+  .eyebrow::before {
+    content: '';
+    @apply h-px w-6 bg-brand-500;
+  }
+
+  /* Subtle inset-hairline card we use everywhere */
+  .card {
+    @apply rounded-2xl bg-white shadow-card ring-1 ring-ink-200/70;
+  }
+
+  /* Pill — for tags, statuses, mini-badges */
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-full
+           px-2.5 py-0.5 text-xs font-medium
+           ring-1 ring-inset;
+  }
+
+  /* Mono with monetary tabular figures */
+  .num {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer utilities {
+  /* Tight grid that doesn't shout — used on hero background */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(15, 19, 32, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(15, 19, 32, 0.06) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+  .bg-grid-soft {
+    background-image:
+      linear-gradient(to right, rgba(15, 19, 32, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(15, 19, 32, 0.04) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  /* Mask edges to fade — used to soften background grids near edges */
+  .mask-radial {
+    mask-image: radial-gradient(ellipse at center, black 35%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 35%, transparent 80%);
+  }
+
+  .mask-bottom {
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  }
+
+  /* Stripe-style subtle linear gradient text — used ONCE in the hero */
+  .text-gradient-brand {
+    background-image: linear-gradient(
+      120deg,
+      #324a16 0%,
+      #5a8324 30%,
+      #71a22f 60%,
+      #45661c 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Skeleton shimmer */
+  .skeleton {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--muted)) 25%,
+      hsl(var(--background)) 50%,
+      hsl(var(--muted)) 75%
+    );
+    background-size: 200% 100%;
+    @apply animate-shimmer rounded-md;
+  }
+
+  /* Stagger children helper — pair with motion components */
+  .stagger > * {
+    opacity: 0;
+    animation: fade-up 0.5s cubic-bezier(0.2, 0.65, 0.3, 0.9) forwards;
+  }
+  .stagger > *:nth-child(1) { animation-delay: 60ms; }
+  .stagger > *:nth-child(2) { animation-delay: 120ms; }
+  .stagger > *:nth-child(3) { animation-delay: 180ms; }
+  .stagger > *:nth-child(4) { animation-delay: 240ms; }
+  .stagger > *:nth-child(5) { animation-delay: 300ms; }
+  .stagger > *:nth-child(6) { animation-delay: 360ms; }
+}

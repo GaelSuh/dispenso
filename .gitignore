@@ -1,0 +1,10 @@
+node_modules/
+.next/
+out/
+.vercel
+.env*.local
+*.tsbuildinfo
+next-env.d.ts
+
+# Large installer binaries — uploaded manually on deploy
+public/downloads/

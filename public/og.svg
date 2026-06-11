@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Background: warm paper with subtle radial brand mesh -->
+  <defs>
+    <radialGradient id="brand-mesh-1" cx="15%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#71a22f" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#71a22f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="brand-mesh-2" cx="90%" cy="90%" r="50%">
+      <stop offset="0%" stop-color="#c68a2b" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#c68a2b" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#0f1320" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="#fdfcf9"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#brand-mesh-1)"/>
+  <rect width="1200" height="630" fill="url(#brand-mesh-2)"/>
+
+  <!-- Brand mark, top-left -->
+  <g transform="translate(80,76)">
+    <rect width="56" height="56" rx="12" fill="#71A22F"/>
+    <path d="M19 14h18v8.5l6.3 12.6a8 8 0 0 1-7.1 11.7H17.8a8 8 0 0 1-7.1-11.7L17 22.5V14z"
+          transform="translate(0,0)" fill="none" stroke="#fff" stroke-width="3.2"
+          stroke-linejoin="round" stroke-linecap="round"/>
+    <line x1="17" y1="14" x2="39" y2="14" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/>
+    <rect x="25" y="29" width="6" height="14" rx="1" fill="#fff"/>
+    <rect x="21" y="33" width="14" height="6" rx="1" fill="#fff"/>
+  </g>
+  <text x="152" y="113" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="600" fill="#0f1320">
+    Dispenso
+  </text>
+
+  <!-- Headline -->
+  <text x="80" y="280" font-family="Inter, system-ui, sans-serif" font-size="68" font-weight="600" fill="#0f1320" letter-spacing="-1.8">
+    Pharmacy operations
+  </text>
+  <text x="80" y="358" font-family="Inter, system-ui, sans-serif" font-size="68" font-weight="600" fill="#0f1320" letter-spacing="-1.8">
+    that keep working
+  </text>
+  <text x="80" y="436" font-family="Inter, system-ui, sans-serif" font-size="68" font-weight="600" fill="#71a22f" letter-spacing="-1.8">
+    when the internet doesn't.
+  </text>
+
+  <!-- Pillar pills -->
+  <g transform="translate(80,506)">
+    <g>
+      <rect width="148" height="36" rx="18" fill="#fff" stroke="#dde1e9" stroke-width="1"/>
+      <circle cx="20" cy="18" r="3.5" fill="#71a22f"/>
+      <text x="34" y="23" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#323848">Offline-first</text>
+    </g>
+    <g transform="translate(160,0)">
+      <rect width="120" height="36" rx="18" fill="#fff" stroke="#dde1e9" stroke-width="1"/>
+      <circle cx="20" cy="18" r="3.5" fill="#71a22f"/>
+      <text x="34" y="23" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#323848">FEFO POS</text>
+    </g>
+    <g transform="translate(292,0)">
+      <rect width="140" height="36" rx="18" fill="#fff" stroke="#dde1e9" stroke-width="1"/>
+      <circle cx="20" cy="18" r="3.5" fill="#71a22f"/>
+      <text x="34" y="23" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#323848">Audit trails</text>
+    </g>
+    <g transform="translate(444,0)">
+      <rect width="160" height="36" rx="18" fill="#fff" stroke="#dde1e9" stroke-width="1"/>
+      <circle cx="20" cy="18" r="3.5" fill="#71a22f"/>
+      <text x="34" y="23" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#323848">Self-hostable</text>
+    </g>
+  </g>
+
+  <!-- Built in Douala marker -->
+  <text x="80" y="596" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#5d6679">
+    Built in Douala for pharmacies that can't afford a bad day.
+  </text>
+  <text x="248" y="113" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="500" fill="#8a93a6">
+    Pharmacy
+  </text>
+
+  <!-- Headline -->
+  <text x="80" y="280" font-family="Inter, system-ui, sans-serif" font-size="68" font-weight="600" fill="#0f1320" letter-spacing="-1.8">
+    Pharmacy operations
+  </text>
+  <text x="80" y="358" font-family="Inter, system-ui, sans-serif" font-size="68" font-weight="600" fill="#0f1320" letter-spacing="-1.8">
+    that keep working
+  </text>
+  <text x="80" y="436" font-family="Inter, system-ui, sans-serif" font-size="68" font-weight="600" fill="#71a22f" letter-spacing="-1.8">
+    when the internet doesn’t.
+  </text>
+
+  <!-- Pillar pills -->
+  <g transform="translate(80,506)">
+    <g>
+      <rect width="148" height="36" rx="18" fill="#fff" stroke="#dde1e9" stroke-width="1"/>
+      <circle cx="20" cy="18" r="3.5" fill="#71a22f"/>
+      <text x="34" y="23" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#323848">Offline-first</text>
+    </g>
+    <g transform="translate(160,0)">
+      <rect width="120" height="36" rx="18" fill="#fff" stroke="#dde1e9" stroke-width="1"/>
+      <circle cx="20" cy="18" r="3.5" fill="#71a22f"/>
+      <text x="34" y="23" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#323848">FEFO POS</text>
+    </g>
+    <g transform="translate(292,0)">
+      <rect width="140" height="36" rx="18" fill="#fff" stroke="#dde1e9" stroke-width="1"/>
+      <circle cx="20" cy="18" r="3.5" fill="#71a22f"/>
+      <text x="34" y="23" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#323848">Audit trails</text>
+    </g>
+    <g transform="translate(444,0)">
+      <rect width="160" height="36" rx="18" fill="#fff" stroke="#dde1e9" stroke-width="1"/>
+      <circle cx="20" cy="18" r="3.5" fill="#71a22f"/>
+      <text x="34" y="23" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#323848">Self-hostable</text>
+    </g>
+  </g>
+
+  <!-- Built in Douala marker -->
+  <text x="80" y="596" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#5d6679">
+    Built in Douala for pharmacies that can’t afford a bad day.
+  </text>
+</svg>
